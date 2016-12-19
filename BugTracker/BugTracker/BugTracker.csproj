@@ -67,6 +67,18 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffMain.Designer.cs">
+      <DependentUpon>StaffMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesterMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesterMain.Designer.cs">
+      <DependentUpon>TesterMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +87,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMain.resx">
+      <DependentUpon>StaffMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesterMain.resx">
+      <DependentUpon>TesterMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
