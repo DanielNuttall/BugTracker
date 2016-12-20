@@ -39,6 +39,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(84, 129);
             this.dataGridView1.Name = "dataGridView1";
@@ -58,7 +59,6 @@
             this.projectsTitle.TabIndex = 1;
             this.projectsTitle.Text = "Projects";
             this.projectsTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.projectsTitle.Click += new System.EventHandler(this.label1_Click);
             // 
             // Projects
             // 

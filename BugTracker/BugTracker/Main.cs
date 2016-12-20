@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BugTracker.Projects;
+using BugTracker.Users;
 
 namespace BugTracker
 {
@@ -23,6 +24,12 @@ namespace BugTracker
             this.userType = userType;
 
             toolStripStatusLabel.Text = userType + " - " + userId;
+
+            if (userType == "Tester")
+            {
+                usersToolStripMenuItem.Visible = false;
+                createProjectsToolStripMenuItem.Visible = false;
+            }
 
             openProject(userId);
         }
@@ -59,32 +66,55 @@ namespace BugTracker
         {
             closeForms();
 
-            Projects.CreateProject a = new Projects.CreateProject();
+            Projects.CreateProject a = new Projects.CreateProject(userId);
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
         }
 
-        // Custom methods
-        private void openProject(string userId)
+        // Open Project Lists
+        public void openProject(string userId)
         {
-            if (toolStripStatusLabel.Text == "Tester")
-            {
-                usersToolStripMenuItem.Visible = false;
-                createProjectsToolStripMenuItem.Visible = false;
-            }
             Projects.Projects a = new Projects.Projects(userId);
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
         }
 
-        private void closeForms()
+        public void openUsers()
+        {
+            Users.Users a = new Users.Users();
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        // Close All open forms
+        public void closeForms()
         {
             foreach (Form frm in this.MdiChildren)
             {
                 frm.Close();
             }
+        }
+
+        private void listUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeForms();
+
+            Users.Users a = new Users.Users();
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeForms();
+            Users.CreateUser a = new Users.CreateUser();
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
         }
     }
 }

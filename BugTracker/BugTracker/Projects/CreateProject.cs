@@ -13,56 +13,50 @@ namespace BugTracker.Projects
 {
     public partial class CreateProject : Form
     {
-        public CreateProject()
+        private string userId;
+        private string pName;
+        private string pDesc;
+        private string gURL;
+        private string createdDate;
+        private string updatedDate;
+
+        public CreateProject(string userId)
         {
             InitializeComponent();
-        }
-
-        private void projectsTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            this.userId = userId;
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            string pName = projectNameValue.Text;
-            string pDesc = projectDescValue.Text;
-            string gitURL = gitURLValue.Text;
-            string aValue = authorValue.Text;
+            pName = projectNameValue.Text;
+            pDesc = projectDescValue.Text;
+            gURL = gitURLValue.Text;
+            createdDate = DateTime.Today.ToString("d");
+            updatedDate = DateTime.Today.ToString("d");
 
-            cProject(pName, pDesc, gitURL, aValue);
+            cProject();
         }
 
-        private void cProject(string pName, string pDesc, string gitURL, string aValue)
+        private void cProject()
         {
-            string CreatedDate = "10/10/10";
-            string UpdatedDate = "10/10/10";
             SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dan30\Source\Repos\BugTracker\BugTracker\Database\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            // SqlCommand sda = new SqlCommand("INSERT INTO Project ('" + pName + "','" + pDesc + "','" + gitURL + "','" + aValue + "','" + CreatedDate + "','" + UpdatedDate + "')", connect);
 
             SqlCommand sda = new SqlCommand("INSERT INTO Project(Name, Description, RepositoryId, AuthorId, CreatedDate, UpdatedDate) VALUES(@Name, @Description, @RepositoryId, @AuthorId, @CreatedDate, @UpdatedDate)", connect);
             sda.Parameters.AddWithValue("@Name", pName);
             sda.Parameters.AddWithValue("@Description", pDesc);
-            sda.Parameters.AddWithValue("@RepositoryId", gitURL);
-            sda.Parameters.AddWithValue("@AuthorId", aValue);
-            sda.Parameters.AddWithValue("@CreatedDate", CreatedDate);
-            sda.Parameters.AddWithValue("@UpdatedDate", UpdatedDate);
+            sda.Parameters.AddWithValue("@RepositoryId", gURL);
+            sda.Parameters.AddWithValue("@AuthorId", userId);
+            sda.Parameters.AddWithValue("@CreatedDate", createdDate);
+            sda.Parameters.AddWithValue("@UpdatedDate", updatedDate);
             
             connect.Open();
             sda.ExecuteNonQuery();
             connect.Close();
 
+            MessageBox.Show("Project Created");
+            ((Main)this.MdiParent).openProject(userId);
             this.Close();
         }
 
-        private void CreateProject_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
