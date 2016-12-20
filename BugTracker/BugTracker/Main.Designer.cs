@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openBugsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -57,23 +57,6 @@
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 431);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(632, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
-            this.toolStripStatusLabel.Text = "Status";
-            this.toolStripStatusLabel.Click += new System.EventHandler(this.toolStripStatusLabel_Click);
             // 
             // dataToolStripMenuItem
             // 
@@ -93,6 +76,20 @@
             this.projectsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.projectsToolStripMenuItem1.Text = "Projects";
             // 
+            // viewProjectsToolStripMenuItem
+            // 
+            this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
+            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.viewProjectsToolStripMenuItem.Text = "View Projects";
+            this.viewProjectsToolStripMenuItem.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem_Click);
+            // 
+            // createProjectsToolStripMenuItem
+            // 
+            this.createProjectsToolStripMenuItem.Name = "createProjectsToolStripMenuItem";
+            this.createProjectsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.createProjectsToolStripMenuItem.Text = "Create Projects";
+            this.createProjectsToolStripMenuItem.Click += new System.EventHandler(this.createProjectsToolStripMenuItem_Click);
+            // 
             // openBugsToolStripMenuItem1
             // 
             this.openBugsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -101,6 +98,18 @@
             this.openBugsToolStripMenuItem1.Name = "openBugsToolStripMenuItem1";
             this.openBugsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.openBugsToolStripMenuItem1.Text = "OpenBugs";
+            // 
+            // viewBugsToolStripMenuItem
+            // 
+            this.viewBugsToolStripMenuItem.Name = "viewBugsToolStripMenuItem";
+            this.viewBugsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.viewBugsToolStripMenuItem.Text = "View bugs";
+            // 
+            // createBugsToolStripMenuItem
+            // 
+            this.createBugsToolStripMenuItem.Name = "createBugsToolStripMenuItem";
+            this.createBugsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.createBugsToolStripMenuItem.Text = "Create bugs";
             // 
             // usersToolStripMenuItem
             // 
@@ -115,38 +124,31 @@
             // createUserToolStripMenuItem
             // 
             this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
-            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.createUserToolStripMenuItem.Text = "Create User";
             // 
             // listUsersToolStripMenuItem
             // 
             this.listUsersToolStripMenuItem.Name = "listUsersToolStripMenuItem";
-            this.listUsersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listUsersToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.listUsersToolStripMenuItem.Text = "List Users";
             // 
-            // viewProjectsToolStripMenuItem
+            // statusStrip
             // 
-            this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
-            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.viewProjectsToolStripMenuItem.Text = "View Projects";
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 431);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(632, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
             // 
-            // createProjectsToolStripMenuItem
+            // toolStripStatusLabel
             // 
-            this.createProjectsToolStripMenuItem.Name = "createProjectsToolStripMenuItem";
-            this.createProjectsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.createProjectsToolStripMenuItem.Text = "Create Projects";
-            // 
-            // viewBugsToolStripMenuItem
-            // 
-            this.viewBugsToolStripMenuItem.Name = "viewBugsToolStripMenuItem";
-            this.viewBugsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.viewBugsToolStripMenuItem.Text = "View bugs";
-            // 
-            // createBugsToolStripMenuItem
-            // 
-            this.createBugsToolStripMenuItem.Name = "createBugsToolStripMenuItem";
-            this.createBugsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.createBugsToolStripMenuItem.Text = "Create bugs";
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel.Text = "Status";
+            this.toolStripStatusLabel.Click += new System.EventHandler(this.toolStripStatusLabel_Click);
             // 
             // Main
             // 
@@ -159,6 +161,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main";
             this.Text = "Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);

@@ -21,14 +21,14 @@ namespace BugTracker
         private void btn_Login_Click(object sender, EventArgs e)
         {
             SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dan30\Source\Repos\BugTracker\BugTracker\Database\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Usertype From Users where Username = '" + User_Text.Text + "' and Password ='" + Pass_Text.Text + "'",connect);
+            SqlDataAdapter sda = new SqlDataAdapter("Select * From Users where Username = '" + User_Text.Text + "' and Password ='" + Pass_Text.Text + "'",connect);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
             if (dt.Rows.Count == 1)
             {
                 this.Hide();
-                Main main = new Main(dt.Rows[0][0].ToString());
+                Main main = new Main(dt.Rows[0][3].ToString(), dt.Rows[0][0].ToString());
                 main.Show();
             } else
             {
