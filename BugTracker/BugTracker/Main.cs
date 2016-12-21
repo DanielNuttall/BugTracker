@@ -29,35 +29,30 @@ namespace BugTracker
             {
                 usersToolStripMenuItem.Visible = false;
                 createProjectsToolStripMenuItem.Visible = false;
+                viewUsers.Visible = false;
+                createProjects.Visible = false;
             }
 
             openProject(userId);
         }
 
-        private void projectsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+        /*
+         *
+         * Open Projects form 
+         * 
+         */
 
-        private void openBugsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // Open Projects form
         private void viewProjectsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeForms();
+            userTitle.Text = "Bug Tracker - Projects";
+            openProject(userId);
+        }
+
+        private void viewProjects_Click(object sender, EventArgs e)
+        {
+            closeForms();
+            userTitle.Text = "Bug Tracker - Projects";
             openProject(userId);
         }
 
@@ -65,11 +60,77 @@ namespace BugTracker
         private void createProjectsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             closeForms();
+            userTitle.Text = "Bug Tracker - Create Projects";
 
             Projects.CreateProject a = new Projects.CreateProject(userId);
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
+        }
+
+        private void createProjects_Click(object sender, EventArgs e)
+        {
+            closeForms();
+            userTitle.Text = "Bug Tracker - Create Projects";
+
+            Projects.CreateProject a = new Projects.CreateProject(userId);
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        private void listUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeForms();
+            userTitle.Text = "Bug Tracker - Users";
+
+            Users.Users a = new Users.Users();
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        private void viewUsers_Click(object sender, EventArgs e)
+        {
+            closeForms();
+            userTitle.Text = "Bug Tracker - Users";
+
+            Users.Users a = new Users.Users();
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeForms();
+            userTitle.Text = "Bug Tracker - Create Users";
+
+            Users.CreateUser a = new Users.CreateUser();
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        private void createUsers_Click(object sender, EventArgs e)
+        {
+            closeForms();
+            userTitle.Text = "Bug Tracker - Create Users";
+
+            Users.CreateUser a = new Users.CreateUser();
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        private void viewBugs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createBugReport_Click(object sender, EventArgs e)
+        {
+
         }
 
         // Open Project Lists
@@ -96,25 +157,6 @@ namespace BugTracker
             {
                 frm.Close();
             }
-        }
-
-        private void listUsersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeForms();
-
-            Users.Users a = new Users.Users();
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
-        }
-
-        private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            Users.CreateUser a = new Users.CreateUser();
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
         }
     }
 }

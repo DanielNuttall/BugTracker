@@ -28,186 +28,259 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userTitle = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuPanel = new System.Windows.Forms.Panel();
-            this.titlePanel = new System.Windows.Forms.Panel();
-            this.viewProjects = new System.Windows.Forms.Button();
-            this.createProjects = new System.Windows.Forms.Button();
-            this.viewUsers = new System.Windows.Forms.Button();
-            this.createUsers = new System.Windows.Forms.Button();
-            this.viewBugs = new System.Windows.Forms.Button();
-            this.createBugReport = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.userTypeValue = new System.Windows.Forms.TextBox();
+            this.userType = new System.Windows.Forms.Label();
+            this.passwordValue = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.Label();
+            this.userNameValue = new System.Windows.Forms.TextBox();
+            this.userName = new System.Windows.Forms.Label();
+            this.createProject = new System.Windows.Forms.Button();
+            this.upDate = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuPanel.SuspendLayout();
-            this.titlePanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // userTitle
-            // 
-            this.userTitle.AutoSize = true;
-            this.userTitle.Font = new System.Drawing.Font("Verdana", 20.25F);
-            this.userTitle.ForeColor = System.Drawing.Color.White;
-            this.userTitle.Location = new System.Drawing.Point(12, 9);
-            this.userTitle.Name = "userTitle";
-            this.userTitle.Padding = new System.Windows.Forms.Padding(10);
-            this.userTitle.Size = new System.Drawing.Size(306, 52);
-            this.userTitle.TabIndex = 0;
-            this.userTitle.Text = "Bug Tracker - Users";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(258, 77);
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(825, 314);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(712, 589);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // menuPanel
+            // panel1
             // 
-            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.menuPanel.Controls.Add(this.createBugReport);
-            this.menuPanel.Controls.Add(this.viewBugs);
-            this.menuPanel.Controls.Add(this.createUsers);
-            this.menuPanel.Controls.Add(this.viewUsers);
-            this.menuPanel.Controls.Add(this.createProjects);
-            this.menuPanel.Controls.Add(this.viewProjects);
-            this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuPanel.Location = new System.Drawing.Point(0, 70);
-            this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(250, 549);
-            this.menuPanel.TabIndex = 2;
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(718, 619);
+            this.panel1.TabIndex = 2;
             // 
-            // titlePanel
+            // panel2
             // 
-            this.titlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.titlePanel.Controls.Add(this.userTitle);
-            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titlePanel.Location = new System.Drawing.Point(0, 0);
-            this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(1188, 70);
-            this.titlePanel.TabIndex = 3;
+            this.panel2.AutoSize = true;
+            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1188, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(0, 619);
+            this.panel2.TabIndex = 3;
             // 
-            // viewProjects
+            // groupBox2
             // 
-            this.viewProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.viewProjects.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.viewProjects.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.viewProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewProjects.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewProjects.Location = new System.Drawing.Point(3, 7);
-            this.viewProjects.Name = "viewProjects";
-            this.viewProjects.Size = new System.Drawing.Size(249, 44);
-            this.viewProjects.TabIndex = 1;
-            this.viewProjects.Text = "View Projects";
-            this.viewProjects.UseVisualStyleBackColor = false;
+            this.groupBox2.Controls.Add(this.userTypeValue);
+            this.groupBox2.Controls.Add(this.userType);
+            this.groupBox2.Controls.Add(this.passwordValue);
+            this.groupBox2.Controls.Add(this.password);
+            this.groupBox2.Controls.Add(this.userNameValue);
+            this.groupBox2.Controls.Add(this.userName);
+            this.groupBox2.Controls.Add(this.createProject);
+            this.groupBox2.Controls.Add(this.upDate);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.shapeContainer2);
+            this.groupBox2.Location = new System.Drawing.Point(731, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(359, 234);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Update/Change";
             // 
-            // createProjects
+            // userTypeValue
             // 
-            this.createProjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.createProjects.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.createProjects.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.createProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createProjects.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createProjects.Location = new System.Drawing.Point(3, 57);
-            this.createProjects.Name = "createProjects";
-            this.createProjects.Size = new System.Drawing.Size(249, 44);
-            this.createProjects.TabIndex = 2;
-            this.createProjects.Text = "Create Projects";
-            this.createProjects.UseVisualStyleBackColor = false;
+            this.userTypeValue.Location = new System.Drawing.Point(147, 110);
+            this.userTypeValue.Name = "userTypeValue";
+            this.userTypeValue.Size = new System.Drawing.Size(100, 20);
+            this.userTypeValue.TabIndex = 21;
             // 
-            // viewUsers
+            // userType
             // 
-            this.viewUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.viewUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.viewUsers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.viewUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewUsers.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewUsers.Location = new System.Drawing.Point(3, 107);
-            this.viewUsers.Name = "viewUsers";
-            this.viewUsers.Size = new System.Drawing.Size(249, 44);
-            this.viewUsers.TabIndex = 3;
-            this.viewUsers.Text = "View Users";
-            this.viewUsers.UseVisualStyleBackColor = false;
+            this.userType.AutoSize = true;
+            this.userType.Location = new System.Drawing.Point(28, 113);
+            this.userType.Name = "userType";
+            this.userType.Size = new System.Drawing.Size(62, 13);
+            this.userType.TabIndex = 20;
+            this.userType.Text = "User Type :";
             // 
-            // createUsers
+            // passwordValue
             // 
-            this.createUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.createUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.createUsers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.createUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createUsers.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createUsers.Location = new System.Drawing.Point(3, 157);
-            this.createUsers.Name = "createUsers";
-            this.createUsers.Size = new System.Drawing.Size(249, 44);
-            this.createUsers.TabIndex = 4;
-            this.createUsers.Text = "Create Users";
-            this.createUsers.UseVisualStyleBackColor = false;
+            this.passwordValue.Location = new System.Drawing.Point(147, 84);
+            this.passwordValue.Name = "passwordValue";
+            this.passwordValue.Size = new System.Drawing.Size(100, 20);
+            this.passwordValue.TabIndex = 19;
             // 
-            // viewBugs
+            // password
             // 
-            this.viewBugs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.viewBugs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.viewBugs.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.viewBugs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewBugs.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewBugs.Location = new System.Drawing.Point(3, 207);
-            this.viewBugs.Name = "viewBugs";
-            this.viewBugs.Size = new System.Drawing.Size(249, 44);
-            this.viewBugs.TabIndex = 5;
-            this.viewBugs.Text = "ViewBugs";
-            this.viewBugs.UseVisualStyleBackColor = false;
+            this.password.AutoSize = true;
+            this.password.Location = new System.Drawing.Point(28, 87);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(59, 13);
+            this.password.TabIndex = 18;
+            this.password.Text = "Password :";
             // 
-            // createBugReport
+            // userNameValue
             // 
-            this.createBugReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.createBugReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.createBugReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.createBugReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createBugReport.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createBugReport.Location = new System.Drawing.Point(3, 257);
-            this.createBugReport.Name = "createBugReport";
-            this.createBugReport.Size = new System.Drawing.Size(249, 44);
-            this.createBugReport.TabIndex = 6;
-            this.createBugReport.Text = "Create Bug Report";
-            this.createBugReport.UseVisualStyleBackColor = false;
+            this.userNameValue.Location = new System.Drawing.Point(147, 58);
+            this.userNameValue.Name = "userNameValue";
+            this.userNameValue.Size = new System.Drawing.Size(100, 20);
+            this.userNameValue.TabIndex = 17;
+            // 
+            // userName
+            // 
+            this.userName.AutoSize = true;
+            this.userName.Location = new System.Drawing.Point(28, 61);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(66, 13);
+            this.userName.TabIndex = 16;
+            this.userName.Text = "User Name :";
+            // 
+            // createProject
+            // 
+            this.createProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(134)))), ((int)(((byte)(227)))));
+            this.createProject.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(134)))), ((int)(((byte)(227)))));
+            this.createProject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.createProject.Location = new System.Drawing.Point(208, 145);
+            this.createProject.Name = "createProject";
+            this.createProject.Size = new System.Drawing.Size(75, 23);
+            this.createProject.TabIndex = 15;
+            this.createProject.Text = "Create New Project";
+            this.createProject.UseVisualStyleBackColor = false;
+            this.createProject.Click += new System.EventHandler(this.createProject_Click);
+            // 
+            // upDate
+            // 
+            this.upDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(134)))), ((int)(((byte)(227)))));
+            this.upDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(134)))), ((int)(((byte)(227)))));
+            this.upDate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.upDate.Location = new System.Drawing.Point(111, 145);
+            this.upDate.Name = "upDate";
+            this.upDate.Size = new System.Drawing.Size(75, 23);
+            this.upDate.TabIndex = 3;
+            this.upDate.Text = "Update";
+            this.upDate.UseVisualStyleBackColor = false;
+            this.upDate.Click += new System.EventHandler(this.upDate_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Update Users";
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(3, 16);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape3,
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer2.Size = new System.Drawing.Size(353, 215);
+            this.shapeContainer2.TabIndex = 14;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 15;
+            this.lineShape3.X2 = 311;
+            this.lineShape3.Y1 = 91;
+            this.lineShape3.Y2 = 91;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 14;
+            this.lineShape2.X2 = 310;
+            this.lineShape2.Y1 = 64;
+            this.lineShape2.Y2 = 64;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 14;
+            this.lineShape1.X2 = 310;
+            this.lineShape1.Y1 = 38;
+            this.lineShape1.Y2 = 38;
             // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1188, 619);
             this.ControlBox = false;
-            this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.titlePanel);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Users";
             this.Text = "Users";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuPanel.ResumeLayout(false);
-            this.titlePanel.ResumeLayout(false);
-            this.titlePanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label userTitle;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel menuPanel;
-        private System.Windows.Forms.Panel titlePanel;
-        private System.Windows.Forms.Button createBugReport;
-        private System.Windows.Forms.Button viewBugs;
-        private System.Windows.Forms.Button createUsers;
-        private System.Windows.Forms.Button viewUsers;
-        private System.Windows.Forms.Button createProjects;
-        private System.Windows.Forms.Button viewProjects;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button createProject;
+        private System.Windows.Forms.Button upDate;
+        private System.Windows.Forms.Label label1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.TextBox userTypeValue;
+        private System.Windows.Forms.Label userType;
+        private System.Windows.Forms.TextBox passwordValue;
+        private System.Windows.Forms.Label password;
+        private System.Windows.Forms.TextBox userNameValue;
+        private System.Windows.Forms.Label userName;
     }
 }
