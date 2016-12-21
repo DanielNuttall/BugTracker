@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BugTracker.Projects;
 using BugTracker.Users;
+using Octokit;
 
 namespace BugTracker
 {
@@ -28,9 +29,7 @@ namespace BugTracker
             if (userType == "Tester")
             {
                 usersToolStripMenuItem.Visible = false;
-                createProjectsToolStripMenuItem.Visible = false;
                 viewUsers.Visible = false;
-                createProjects.Visible = false;
             }
 
             openProject(userId);
@@ -57,27 +56,6 @@ namespace BugTracker
         }
 
         // Open Create Project form
-        private void createProjectsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Create Projects";
-
-            Projects.CreateProject a = new Projects.CreateProject(userId);
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
-        }
-
-        private void createProjects_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Create Projects";
-
-            Projects.CreateProject a = new Projects.CreateProject(userId);
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
-        }
 
         private void listUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -96,28 +74,6 @@ namespace BugTracker
             userTitle.Text = "Bug Tracker - Users";
 
             Users.Users a = new Users.Users();
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
-        }
-
-        private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Create Users";
-
-            Users.CreateUser a = new Users.CreateUser();
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
-        }
-
-        private void createUsers_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Create Users";
-
-            Users.CreateUser a = new Users.CreateUser();
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();

@@ -34,13 +34,11 @@
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openBugsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -89,25 +87,17 @@
             // projectsToolStripMenuItem1
             // 
             this.projectsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewProjectsToolStripMenuItem,
-            this.createProjectsToolStripMenuItem});
+            this.viewProjectsToolStripMenuItem});
             this.projectsToolStripMenuItem1.Name = "projectsToolStripMenuItem1";
-            this.projectsToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.projectsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.projectsToolStripMenuItem1.Text = "Projects";
             // 
             // viewProjectsToolStripMenuItem
             // 
             this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
-            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viewProjectsToolStripMenuItem.Text = "View Projects";
             this.viewProjectsToolStripMenuItem.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem_Click);
-            // 
-            // createProjectsToolStripMenuItem
-            // 
-            this.createProjectsToolStripMenuItem.Name = "createProjectsToolStripMenuItem";
-            this.createProjectsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.createProjectsToolStripMenuItem.Text = "Create Projects";
-            this.createProjectsToolStripMenuItem.Click += new System.EventHandler(this.createProjectsToolStripMenuItem_Click);
             // 
             // openBugsToolStripMenuItem1
             // 
@@ -115,7 +105,7 @@
             this.viewBugsToolStripMenuItem,
             this.createBugsToolStripMenuItem});
             this.openBugsToolStripMenuItem1.Name = "openBugsToolStripMenuItem1";
-            this.openBugsToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.openBugsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.openBugsToolStripMenuItem1.Text = "OpenBugs";
             // 
             // viewBugsToolStripMenuItem
@@ -133,8 +123,7 @@
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listUsersToolStripMenuItem,
-            this.createUserToolStripMenuItem});
+            this.listUsersToolStripMenuItem});
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.usersToolStripMenuItem.Text = "Users";
@@ -142,16 +131,9 @@
             // listUsersToolStripMenuItem
             // 
             this.listUsersToolStripMenuItem.Name = "listUsersToolStripMenuItem";
-            this.listUsersToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.listUsersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listUsersToolStripMenuItem.Text = "List Users";
             this.listUsersToolStripMenuItem.Click += new System.EventHandler(this.listUsersToolStripMenuItem_Click);
-            // 
-            // createUserToolStripMenuItem
-            // 
-            this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
-            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.createUserToolStripMenuItem.Text = "Create User";
-            this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -395,12 +377,10 @@
         private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem projectsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createProjectsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openBugsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem viewBugsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createBugsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listUsersToolStripMenuItem;
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button createBugReport;
