@@ -42,5 +42,17 @@ namespace BugTracker
         {
             this.Close();
         }
+
+
+        private void User_Text_Click(object sender, EventArgs e)
+        {
+            User_Text.Text = "";
+        }
+
+        private void Pass_Text_Click(object sender, EventArgs e)
+        {
+            Pass_Text.UseSystemPasswordChar = true;
+            Pass_Text.Text = "";
+        }
     }
 }
