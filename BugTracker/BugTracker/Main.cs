@@ -55,11 +55,6 @@ namespace BugTracker
             a.Show();
         }
 
-        private void viewBugs_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void createBugReport_Click(object sender, EventArgs e)
         {
 

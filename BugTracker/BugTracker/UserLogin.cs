@@ -23,6 +23,7 @@ namespace BugTracker
         {
             InitializeComponent();
             gitClient = new GitHubClient(new ProductHeaderValue("my-cool-app"));
+            Pass_Text.UseSystemPasswordChar = true;
         }
 
         private async void btn_Login_Click(object sender, EventArgs e)
@@ -55,7 +56,6 @@ namespace BugTracker
 
         private void Pass_Text_Click(object sender, EventArgs e)
         {
-            Pass_Text.UseSystemPasswordChar = true;
             Pass_Text.Text = "";
         }
     }

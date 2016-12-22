@@ -97,5 +97,20 @@ namespace BugTracker.Projects
                 MessageBox.Show("Could Not Add User");
             }
         }
+
+        private async void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            repositoryId = dataGridView1.SelectedCells[0].Value.ToString();
+
+            ApiConnection connect = new ApiConnection(gitClient.Connection);
+            RepositoriesClient repoClient = new RepositoriesClient(connect);
+            Repository selectedRepo = await repoClient.Get(Convert.ToInt64(repositoryId));
+
+            Bugs.Bugs Refresh = new Bugs.Bugs(gitUser, gitClient, selectedRepo);
+            Refresh.MdiParent = this.MdiParent;
+            Refresh.WindowState = FormWindowState.Maximized;
+            this.Dispose();
+            Refresh.Show();
+        }
     }
 }

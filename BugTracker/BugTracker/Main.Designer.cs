@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.createBugReport = new System.Windows.Forms.Button();
-            this.viewBugs = new System.Windows.Forms.Button();
             this.viewProjects = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -73,7 +72,6 @@
             this.menuPanel.Controls.Add(this.label3);
             this.menuPanel.Controls.Add(this.label1);
             this.menuPanel.Controls.Add(this.createBugReport);
-            this.menuPanel.Controls.Add(this.viewBugs);
             this.menuPanel.Controls.Add(this.viewProjects);
             this.menuPanel.Controls.Add(this.shapeContainer1);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -114,29 +112,13 @@
             this.createBugReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createBugReport.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBugReport.ForeColor = System.Drawing.Color.White;
-            this.createBugReport.Location = new System.Drawing.Point(3, 214);
+            this.createBugReport.Location = new System.Drawing.Point(3, 176);
             this.createBugReport.Name = "createBugReport";
             this.createBugReport.Size = new System.Drawing.Size(249, 44);
             this.createBugReport.TabIndex = 6;
             this.createBugReport.Text = "Create Bug Report";
             this.createBugReport.UseVisualStyleBackColor = false;
             this.createBugReport.Click += new System.EventHandler(this.createBugReport_Click);
-            // 
-            // viewBugs
-            // 
-            this.viewBugs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.viewBugs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.viewBugs.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.viewBugs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewBugs.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewBugs.ForeColor = System.Drawing.Color.White;
-            this.viewBugs.Location = new System.Drawing.Point(3, 176);
-            this.viewBugs.Name = "viewBugs";
-            this.viewBugs.Size = new System.Drawing.Size(249, 44);
-            this.viewBugs.TabIndex = 5;
-            this.viewBugs.Text = "View Bugs";
-            this.viewBugs.UseVisualStyleBackColor = false;
-            this.viewBugs.Click += new System.EventHandler(this.viewBugs_Click);
             // 
             // viewProjects
             // 
@@ -246,7 +228,6 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button createBugReport;
-        private System.Windows.Forms.Button viewBugs;
         private System.Windows.Forms.Button viewProjects;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel titlePanel;
