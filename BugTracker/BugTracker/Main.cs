@@ -8,72 +8,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BugTracker.Projects;
-using BugTracker.Users;
 using Octokit;
 
 namespace BugTracker
 {
     public partial class Main : Form
     {
-        private string userId;
-        private string userType;
+        private GitHubClient gitClient;
+        private User gitUser;
 
-        public Main(String userType, String userId)
+        public Main(User gitUser, GitHubClient gitClient)
         {
             InitializeComponent();
-            this.userId = userId;
-            this.userType = userType;
 
-            toolStripStatusLabel.Text = userType + " - " + userId;
+            this.gitUser = gitUser;
+            this.gitClient = gitClient;
 
-            if (userType == "Tester")
-            {
-                usersToolStripMenuItem.Visible = false;
-                viewUsers.Visible = false;
-            }
+            toolStripStatusLabel.Text = gitUser.Login.ToString();
 
-            openProject(userId);
-        }
-
-        /*
-         *
-         * Open Projects form 
-         * 
-         */
-
-        private void viewProjectsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Projects";
-            openProject(userId);
-        }
-
-        private void viewProjects_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Projects";
-            openProject(userId);
-        }
-
-        // Open Create Project form
-
-        private void listUsersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Users";
-
-            Users.Users a = new Users.Users();
+            Projects.Projects a = new Projects.Projects(gitUser, gitClient);
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
         }
 
-        private void viewUsers_Click(object sender, EventArgs e)
+         // Open Projects form 
+        private void viewProjects_Click(object sender, EventArgs e)
         {
             closeForms();
-            userTitle.Text = "Bug Tracker - Users";
+            userTitle.Text = "Bug Tracker - Projects";
 
-            Users.Users a = new Users.Users();
+            Projects.Projects a = new Projects.Projects(gitUser, gitClient);
+            a.MdiParent = this;
+            a.WindowState = FormWindowState.Maximized;
+            a.Show();
+        }
+
+        public void refreshProjects()
+        {
+            closeForms();
+            userTitle.Text = "Bug Tracker - Projects";
+
+            Projects.Projects a = new Projects.Projects(gitUser, gitClient);
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
@@ -87,23 +63,6 @@ namespace BugTracker
         private void createBugReport_Click(object sender, EventArgs e)
         {
 
-        }
-
-        // Open Project Lists
-        public void openProject(string userId)
-        {
-            Projects.Projects a = new Projects.Projects(userId);
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
-        }
-
-        public void openUsers()
-        {
-            Users.Users a = new Users.Users();
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
         }
 
         // Close All open forms

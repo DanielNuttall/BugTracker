@@ -8,34 +8,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Octokit;
 
 namespace BugTracker
 {
     public partial class UserLogin : Form
     {
+
+        private GitHubClient gitClient;
+        private Credentials basicAuth;
+        private User gitUser;
+
         public UserLogin()
         {
             InitializeComponent();
+            gitClient = new GitHubClient(new ProductHeaderValue("my-cool-app"));
         }
 
-        private void btn_Login_Click(object sender, EventArgs e)
+        private async void btn_Login_Click(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dan30\Source\Repos\BugTracker\BugTracker\Database\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Users where Username = '" + User_Text.Text + "' and Password ='" + Pass_Text.Text + "'",connect);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            if (dt.Rows.Count == 1)
+            try
             {
-                this.Hide();
-                Main main = new Main(dt.Rows[0][3].ToString(), dt.Rows[0][0].ToString());
+                basicAuth = new Credentials(User_Text.Text, Pass_Text.Text);
+                gitClient.Credentials = basicAuth;
+                gitUser = await gitClient.User.Current();
+
+                Main main = new Main(gitUser, gitClient);
                 main.Show();
-            } else
+            }
+            catch (AuthorizationException loginError)
             {
                 MessageBox.Show("Incorrect Login");
             }
-
-            
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

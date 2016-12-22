@@ -30,110 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openBugsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.createBugReport = new System.Windows.Forms.Button();
             this.viewBugs = new System.Windows.Forms.Button();
-            this.viewUsers = new System.Windows.Forms.Button();
             this.viewProjects = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.userTitle = new System.Windows.Forms.Label();
-            this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.titlePanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataToolStripMenuItem,
-            this.usersToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1184, 24);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "MenuStrip";
-            // 
-            // dataToolStripMenuItem
-            // 
-            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.projectsToolStripMenuItem1,
-            this.openBugsToolStripMenuItem1});
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.dataToolStripMenuItem.Text = "Data";
-            // 
-            // projectsToolStripMenuItem1
-            // 
-            this.projectsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewProjectsToolStripMenuItem});
-            this.projectsToolStripMenuItem1.Name = "projectsToolStripMenuItem1";
-            this.projectsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.projectsToolStripMenuItem1.Text = "Projects";
-            // 
-            // viewProjectsToolStripMenuItem
-            // 
-            this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
-            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.viewProjectsToolStripMenuItem.Text = "View Projects";
-            this.viewProjectsToolStripMenuItem.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem_Click);
-            // 
-            // openBugsToolStripMenuItem1
-            // 
-            this.openBugsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewBugsToolStripMenuItem,
-            this.createBugsToolStripMenuItem});
-            this.openBugsToolStripMenuItem1.Name = "openBugsToolStripMenuItem1";
-            this.openBugsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.openBugsToolStripMenuItem1.Text = "OpenBugs";
-            // 
-            // viewBugsToolStripMenuItem
-            // 
-            this.viewBugsToolStripMenuItem.Name = "viewBugsToolStripMenuItem";
-            this.viewBugsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.viewBugsToolStripMenuItem.Text = "View bugs";
-            // 
-            // createBugsToolStripMenuItem
-            // 
-            this.createBugsToolStripMenuItem.Name = "createBugsToolStripMenuItem";
-            this.createBugsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.createBugsToolStripMenuItem.Text = "Create bugs";
-            // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listUsersToolStripMenuItem});
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.usersToolStripMenuItem.Text = "Users";
-            // 
-            // listUsersToolStripMenuItem
-            // 
-            this.listUsersToolStripMenuItem.Name = "listUsersToolStripMenuItem";
-            this.listUsersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.listUsersToolStripMenuItem.Text = "List Users";
-            this.listUsersToolStripMenuItem.Click += new System.EventHandler(this.listUsersToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -155,17 +71,15 @@
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.menuPanel.Controls.Add(this.label3);
-            this.menuPanel.Controls.Add(this.label2);
             this.menuPanel.Controls.Add(this.label1);
             this.menuPanel.Controls.Add(this.createBugReport);
             this.menuPanel.Controls.Add(this.viewBugs);
-            this.menuPanel.Controls.Add(this.viewUsers);
             this.menuPanel.Controls.Add(this.viewProjects);
             this.menuPanel.Controls.Add(this.shapeContainer1);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuPanel.Location = new System.Drawing.Point(0, 24);
+            this.menuPanel.Location = new System.Drawing.Point(0, 0);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(250, 629);
+            this.menuPanel.Size = new System.Drawing.Size(250, 653);
             this.menuPanel.TabIndex = 21;
             // 
             // label3
@@ -174,23 +88,11 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.label3.Font = new System.Drawing.Font("Verdana", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(80, 235);
+            this.label3.Location = new System.Drawing.Point(80, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 24;
             this.label3.Text = "Bugs";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.label2.Font = new System.Drawing.Font("Verdana", 15.75F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(80, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Users";
             // 
             // label1
             // 
@@ -212,7 +114,7 @@
             this.createBugReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createBugReport.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createBugReport.ForeColor = System.Drawing.Color.White;
-            this.createBugReport.Location = new System.Drawing.Point(1, 326);
+            this.createBugReport.Location = new System.Drawing.Point(3, 214);
             this.createBugReport.Name = "createBugReport";
             this.createBugReport.Size = new System.Drawing.Size(249, 44);
             this.createBugReport.TabIndex = 6;
@@ -228,29 +130,13 @@
             this.viewBugs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewBugs.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewBugs.ForeColor = System.Drawing.Color.White;
-            this.viewBugs.Location = new System.Drawing.Point(1, 288);
+            this.viewBugs.Location = new System.Drawing.Point(3, 176);
             this.viewBugs.Name = "viewBugs";
             this.viewBugs.Size = new System.Drawing.Size(249, 44);
             this.viewBugs.TabIndex = 5;
             this.viewBugs.Text = "View Bugs";
             this.viewBugs.UseVisualStyleBackColor = false;
             this.viewBugs.Click += new System.EventHandler(this.viewBugs_Click);
-            // 
-            // viewUsers
-            // 
-            this.viewUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.viewUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.viewUsers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.viewUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewUsers.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewUsers.ForeColor = System.Drawing.Color.White;
-            this.viewUsers.Location = new System.Drawing.Point(1, 170);
-            this.viewUsers.Name = "viewUsers";
-            this.viewUsers.Size = new System.Drawing.Size(249, 44);
-            this.viewUsers.TabIndex = 3;
-            this.viewUsers.Text = "View Users";
-            this.viewUsers.UseVisualStyleBackColor = false;
-            this.viewUsers.Click += new System.EventHandler(this.viewUsers_Click);
             // 
             // viewProjects
             // 
@@ -275,9 +161,8 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape3,
-            this.rectangleShape2,
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(250, 629);
+            this.shapeContainer1.Size = new System.Drawing.Size(250, 653);
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
             // 
@@ -286,18 +171,9 @@
             this.rectangleShape3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.rectangleShape3.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape3.BorderColor = System.Drawing.Color.Transparent;
-            this.rectangleShape3.Location = new System.Drawing.Point(1, 220);
+            this.rectangleShape3.Location = new System.Drawing.Point(1, 113);
             this.rectangleShape3.Name = "rectangleShape3";
             this.rectangleShape3.Size = new System.Drawing.Size(249, 56);
-            // 
-            // rectangleShape2
-            // 
-            this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape2.BorderColor = System.Drawing.Color.Transparent;
-            this.rectangleShape2.Location = new System.Drawing.Point(1, 106);
-            this.rectangleShape2.Name = "rectangleShape2";
-            this.rectangleShape2.Size = new System.Drawing.Size(249, 56);
             // 
             // rectangleShape1
             // 
@@ -323,7 +199,7 @@
             this.titlePanel.Controls.Add(this.pictureBox1);
             this.titlePanel.Controls.Add(this.userTitle);
             this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titlePanel.Location = new System.Drawing.Point(250, 24);
+            this.titlePanel.Location = new System.Drawing.Point(250, 0);
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Size = new System.Drawing.Size(934, 56);
             this.titlePanel.TabIndex = 23;
@@ -348,14 +224,10 @@
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip;
             this.Name = "Main";
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuPanel.ResumeLayout(false);
@@ -369,23 +241,12 @@
         }
         #endregion
 
-
-        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem projectsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openBugsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem viewBugsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createBugsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listUsersToolStripMenuItem;
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button createBugReport;
         private System.Windows.Forms.Button viewBugs;
-        private System.Windows.Forms.Button viewUsers;
         private System.Windows.Forms.Button viewProjects;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel titlePanel;
@@ -393,9 +254,7 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
 }
