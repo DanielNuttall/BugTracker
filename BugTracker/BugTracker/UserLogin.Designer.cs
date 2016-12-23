@@ -51,7 +51,7 @@
             this.Pass_Text.Location = new System.Drawing.Point(162, 175);
             this.Pass_Text.Name = "Pass_Text";
             this.Pass_Text.Size = new System.Drawing.Size(168, 20);
-            this.Pass_Text.TabIndex = 0;
+            this.Pass_Text.TabIndex = 1;
             this.Pass_Text.Text = "Password";
             this.Pass_Text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Pass_Text.Click += new System.EventHandler(this.Pass_Text_Click);
@@ -65,7 +65,7 @@
             this.User_Text.Location = new System.Drawing.Point(162, 118);
             this.User_Text.Name = "User_Text";
             this.User_Text.Size = new System.Drawing.Size(168, 20);
-            this.User_Text.TabIndex = 1;
+            this.User_Text.TabIndex = 0;
             this.User_Text.Text = "Username";
             this.User_Text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.User_Text.Click += new System.EventHandler(this.User_Text_Click);
