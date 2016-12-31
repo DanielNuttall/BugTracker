@@ -47,6 +47,9 @@ namespace BugTracker.Bugs
             getFiles();
 
             getBugs();
+
+            getUsers();
+
         }
 
         private async void getBugs()
@@ -61,7 +64,11 @@ namespace BugTracker.Bugs
             bugTable.Columns.Add("State");
 
             // ADJUST THIS SO THAT IT OPENS ISSUES FOR A SPECIFIC REPOSITORY
-            IReadOnlyList<Issue> userRepos = await gitClient.Issue.GetAllForRepository(repoId);
+
+            RepositoryIssueRequest repoRequest = new RepositoryIssueRequest();
+            repoRequest.State = ItemStateFilter.All;
+
+            IReadOnlyList<Issue> userRepos = await gitClient.Issue.GetAllForRepository(repoId, repoRequest);
             // IReadOnlyList<Issue> userRepos = await gitClient.Issue.GetAllForCurrent();
             foreach (Issue a in userRepos)
             {
@@ -79,27 +86,71 @@ namespace BugTracker.Bugs
             dataGridView1.DataSource = bugTable;
         }
 
-        private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void getUsers()
         {
-            repositoryId = Convert.ToInt64(dataGridView1.SelectedCells[4].Value.ToString());
-            issueId = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
-            cBox.Items.Clear();
+            RepoCollaboratorsClient colabclient = new RepoCollaboratorsClient(connect);
+            colabclient.GetAll(repositoryId);
 
-            // Get Selected Issue Info
-            Issue sIssue = await issuesClient.Get(repositoryId, issueId);
-            issueDescValue.Text = sIssue.Body;
-
-            uIssueTitleValue.Text = sIssue.Title;
-            uIssueValue.Text = sIssue.Body;
-
-            // Get Selected Issue Comments
-            comment = new IssueCommentsClient(connect);
-            IReadOnlyList<IssueComment> userComments = await comment.GetAllForIssue(repositoryId, issueId);
-            foreach (IssueComment a in userComments)
+            IReadOnlyList<User> users = await colabclient.GetAll(repositoryId); ;
+            foreach (User a in users)
             {
 
-                cBox.Items.Add("User: " + a.User.Login + " Text: " + a.Body.ToString() + " UpdatedAt: " + a.UpdatedAt.ToString());
+                uAssign.Items.Add(a.Login);
             }
+
+        }
+
+        private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                repositoryId = Convert.ToInt64(dataGridView1.SelectedCells[4].Value.ToString());
+                issueId = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+                uIssueValue.Text = "";
+                uIssueMethod.Text = "";
+                uIssueLine.Text = "";
+                cBox.Items.Clear();
+
+                // Get Selected Issue Info
+                Issue sIssue = await issuesClient.Get(repositoryId, issueId);
+                issueDescValue.Text = sIssue.Body;
+
+                string[] lines = sIssue.Body.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+
+                foreach (string line in lines) {
+                    if (line.Contains("Method:"))
+                    {
+                        uIssueMethod.Text = line.Replace("Method: ", "");
+                    } else if (line.Contains("Line:"))
+                    {
+                        uIssueLine.Text = line.Replace("Line: ", "");
+                    } else
+                    {
+                        uIssueValue.Text = uIssueValue.Text + line.Replace("Desc: ", "");
+                    }
+                }
+
+                uIssueTitleValue.Text = sIssue.Title;
+
+                uStatusValue.Text = sIssue.State.ToString();
+
+                uAssign.Text = sIssue.Assignee.Login;
+
+                // Get Selected Issue Comments
+                comment = new IssueCommentsClient(connect);
+                IReadOnlyList<IssueComment> userComments = await comment.GetAllForIssue(repositoryId, issueId);
+                foreach (IssueComment a in userComments)
+                {
+                    ListViewItem item = new ListViewItem(a.User.Login);
+                    item.SubItems.Add(a.Body.ToString());
+                    item.SubItems.Add(a.UpdatedAt.ToString());
+                    cbox2.Items.Add(item);
+                }
+            } catch (Exception error)
+            {
+
+            }
+            
         }
 
         private async void addComment_Click(object sender, EventArgs e)
@@ -187,12 +238,12 @@ namespace BugTracker.Bugs
 
         private void repoFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            newCommentValue.AppendText(selectedRepo.HtmlUrl + repoFiles.Text.Insert(0, "/tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
+            newCommentValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles.Text.Insert(0, "/tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
         }
 
         private void repoFiles2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            newIssueValue.AppendText(selectedRepo.HtmlUrl + repoFiles2.Text.Insert(0, "/tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
+            newIssueValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles2.Text.Insert(0, " / tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
         }
 
         private async void button1_Click_1(object sender, EventArgs e)
@@ -201,6 +252,9 @@ namespace BugTracker.Bugs
 
             NewIssue issue = new NewIssue(issueTitleValue.Text);
             issue.Body = newIssueValue.Text;
+
+            issue.Body = "Desc: " + newIssueValue.Text + "\n" + "Method: " + newIssueMethod.Text + "\n" + "Line: " + newIssueLine.Text + "\n";
+
             issue.Assignee = gitUser.Login;
 
             await issueClient.Create(repositoryId, issue);
@@ -212,11 +266,22 @@ namespace BugTracker.Bugs
             Refresh.Show();
         }
 
-        private async void updateIssue_Click(object sender, EventArgs e)
+        private async void updateIssue_Click_1(object sender, EventArgs e)
         {
             IssuesClient issueClient = new IssuesClient(connect);
             IssueUpdate uIssue = new IssueUpdate();
-            uIssue.Body = uIssueValue.Text;
+            uIssue.Body = "Desc: " + uIssueValue.Text + "\n" + "Method: " + uIssueMethod.Text + "\n" + "Line: " + uIssueLine.Text + "\n";
+
+            if (uStatusValue.Text == "Closed")
+            {
+                uIssue.State = ItemState.Closed;
+            }
+            else
+            {
+                uIssue.State = ItemState.Open;
+            }
+
+            uIssue.Assignee = uAssign.Text;
 
             // long repositoryId, int number, IssueUpdate issueUpdate
             await issueClient.Update(repositoryId, issueId, uIssue);

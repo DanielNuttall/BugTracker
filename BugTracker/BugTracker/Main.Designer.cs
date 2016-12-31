@@ -34,12 +34,9 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.createBugReport = new System.Windows.Forms.Button();
             this.viewProjects = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titlePanel = new System.Windows.Forms.Panel();
@@ -69,9 +66,7 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.menuPanel.Controls.Add(this.label3);
             this.menuPanel.Controls.Add(this.label1);
-            this.menuPanel.Controls.Add(this.createBugReport);
             this.menuPanel.Controls.Add(this.viewProjects);
             this.menuPanel.Controls.Add(this.shapeContainer1);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -79,18 +74,6 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(250, 653);
             this.menuPanel.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.label3.Font = new System.Drawing.Font("Verdana", 15.75F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(80, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 25);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Bugs";
             // 
             // label1
             // 
@@ -103,22 +86,6 @@
             this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Projects";
-            // 
-            // createBugReport
-            // 
-            this.createBugReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.createBugReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.createBugReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.createBugReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createBugReport.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createBugReport.ForeColor = System.Drawing.Color.White;
-            this.createBugReport.Location = new System.Drawing.Point(3, 176);
-            this.createBugReport.Name = "createBugReport";
-            this.createBugReport.Size = new System.Drawing.Size(249, 44);
-            this.createBugReport.TabIndex = 6;
-            this.createBugReport.Text = "Create Bug Report";
-            this.createBugReport.UseVisualStyleBackColor = false;
-            this.createBugReport.Click += new System.EventHandler(this.createBugReport_Click);
             // 
             // viewProjects
             // 
@@ -142,20 +109,10 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.rectangleShape3,
             this.rectangleShape1});
             this.shapeContainer1.Size = new System.Drawing.Size(250, 653);
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
-            // 
-            // rectangleShape3
-            // 
-            this.rectangleShape3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.rectangleShape3.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape3.BorderColor = System.Drawing.Color.Transparent;
-            this.rectangleShape3.Location = new System.Drawing.Point(1, 113);
-            this.rectangleShape3.Name = "rectangleShape3";
-            this.rectangleShape3.Size = new System.Drawing.Size(249, 56);
             // 
             // rectangleShape1
             // 
@@ -227,15 +184,12 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Panel menuPanel;
-        private System.Windows.Forms.Button createBugReport;
         private System.Windows.Forms.Button viewProjects;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel titlePanel;
         private System.Windows.Forms.Label userTitle;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
     }
 }
