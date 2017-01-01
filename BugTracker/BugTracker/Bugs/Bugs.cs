@@ -45,6 +45,21 @@ namespace BugTracker.Bugs
             this.selectedRepo = selectedRepo;
             this.repositoryId = selectedRepo.Id;
 
+            if (userType == "Tester")
+            {
+                uIssueMethod.ReadOnly = true;
+                uIssueLine.ReadOnly = true;
+                uStatusValue.Enabled = false;
+                repoFiles3.Enabled = false;
+                uAssign.Enabled = false;
+
+                newIssueMethod.ReadOnly = true;
+                newIssueLine.ReadOnly = true;
+                repoFiles2.Enabled = false;
+
+
+            }
+
             connect = new ApiConnection(gitClient.Connection);
             issuesClient = new IssuesClient(connect);
             comment = new IssueCommentsClient(connect);
@@ -154,6 +169,10 @@ namespace BugTracker.Bugs
                     item.SubItems.Add(a.UpdatedAt.ToString());
                     cbox2.Items.Add(item);
                 }
+            } catch (NullReferenceException noUsersAssigned)
+            {
+                MessageBox.Show("No User Currently assigned to this Issue - Admin can assign a user on the Update Issue tab");
+                uAssign.Text = gitUser.Login;
             } catch (Exception error)
             {
                 MessageBox.Show("Could Not Get Issue Info - Check Connection");
@@ -269,19 +288,27 @@ namespace BugTracker.Bugs
         // Create new issue
         private async void button1_Click_1(object sender, EventArgs e)
         {
-            try
+            if (issueTitleValue.Text.Length > 0)
             {
-                NewIssue issue = new NewIssue(issueTitleValue.Text);
-                issue.Body = newIssueValue.Text;
-                issue.Body = "Desc: " + newIssueValue.Text + "\n" + "Method: " + newIssueMethod.Text + "\n" + "Line: " + newIssueLine.Text + "\n";
-                issue.Assignee = gitUser.Login;
+                try
+                {
+                    NewIssue issue = new NewIssue(issueTitleValue.Text);
+                    issue.Body = newIssueValue.Text;
+                    issue.Body = "Desc: " + newIssueValue.Text + "\n" + "Method: " + newIssueMethod.Text + "\n" + "Line: " + newIssueLine.Text + "\n";
+                    issue.Assignee = gitUser.Login;
 
-                await issuesClient.Create(repositoryId, issue);
-                refresh();
-            } catch (Exception error)
+                    await issuesClient.Create(repositoryId, issue);
+                    refresh();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Could Not Add New Issue - Check Connection");
+                }
+            } else
             {
-                MessageBox.Show("Could Not Add New Issue - Check Connection");
+                MessageBox.Show("Please enter an Issue Title");
             }
+
         }
 
         // Update currently selected issue

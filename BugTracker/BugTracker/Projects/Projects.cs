@@ -32,6 +32,13 @@ namespace BugTracker.Projects
             this.gitUser = gitUser;
             this.gitClient = gitClient;
             this.userType = userType;
+
+            if (userType == "Tester")
+            {
+                groupBox1.Visible = false;
+                groupBox2.Visible = false;
+            } 
+
             getProjects();
         }
 
@@ -118,7 +125,7 @@ namespace BugTracker.Projects
                 RepositoriesClient repoClient = new RepositoriesClient(connect);
                 Repository selectedRepo = await repoClient.Get(Convert.ToInt64(repositoryId));
 
-                Bugs.Bugs Refresh = new Bugs.Bugs(gitUser, gitClient, selectedRepo);
+                Bugs.Bugs Refresh = new Bugs.Bugs(gitUser, gitClient, selectedRepo, userType);
                 Refresh.MdiParent = this.MdiParent;
                 Refresh.WindowState = FormWindowState.Maximized;
                 this.Dispose();
