@@ -40,6 +40,9 @@
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.userTypeValue = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Pass_Text
@@ -48,7 +51,7 @@
             this.Pass_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Pass_Text.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pass_Text.ForeColor = System.Drawing.Color.DarkGray;
-            this.Pass_Text.Location = new System.Drawing.Point(162, 175);
+            this.Pass_Text.Location = new System.Drawing.Point(162, 162);
             this.Pass_Text.Name = "Pass_Text";
             this.Pass_Text.Size = new System.Drawing.Size(168, 20);
             this.Pass_Text.TabIndex = 1;
@@ -62,7 +65,7 @@
             this.User_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.User_Text.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User_Text.ForeColor = System.Drawing.Color.DarkGray;
-            this.User_Text.Location = new System.Drawing.Point(162, 118);
+            this.User_Text.Location = new System.Drawing.Point(162, 113);
             this.User_Text.Name = "User_Text";
             this.User_Text.Size = new System.Drawing.Size(168, 20);
             this.User_Text.TabIndex = 0;
@@ -118,6 +121,7 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape5,
             this.rectangleShape4,
             this.rectangleShape1,
             this.rectangleShape3,
@@ -158,7 +162,7 @@
             this.rectangleShape3.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape3.BorderColor = System.Drawing.Color.White;
             this.rectangleShape3.CornerRadius = 5;
-            this.rectangleShape3.Location = new System.Drawing.Point(151, 107);
+            this.rectangleShape3.Location = new System.Drawing.Point(151, 102);
             this.rectangleShape3.Name = "rectangleShape3";
             this.rectangleShape3.Size = new System.Drawing.Size(186, 41);
             // 
@@ -170,7 +174,7 @@
             this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape2.BorderColor = System.Drawing.Color.White;
             this.rectangleShape2.CornerRadius = 5;
-            this.rectangleShape2.Location = new System.Drawing.Point(153, 164);
+            this.rectangleShape2.Location = new System.Drawing.Point(153, 151);
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(186, 41);
             // 
@@ -193,12 +197,49 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "BugTracker uses Github - Signup for an account here :";
             // 
+            // rectangleShape5
+            // 
+            this.rectangleShape5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rectangleShape5.BackColor = System.Drawing.Color.Gainsboro;
+            this.rectangleShape5.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape5.BorderColor = System.Drawing.Color.White;
+            this.rectangleShape5.CornerRadius = 5;
+            this.rectangleShape5.Location = new System.Drawing.Point(85, 200);
+            this.rectangleShape5.Name = "rectangleShape5";
+            this.rectangleShape5.Size = new System.Drawing.Size(298, 41);
+            // 
+            // userTypeValue
+            // 
+            this.userTypeValue.FormattingEnabled = true;
+            this.userTypeValue.Items.AddRange(new object[] {
+            "Admin",
+            "Tester"});
+            this.userTypeValue.Location = new System.Drawing.Point(246, 211);
+            this.userTypeValue.Name = "userTypeValue";
+            this.userTypeValue.Size = new System.Drawing.Size(133, 21);
+            this.userTypeValue.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F);
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(108, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 18);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Interface Type:";
+            // 
             // UserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(489, 413);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.userTypeValue);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.User_Text);
@@ -231,6 +272,9 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
+        private System.Windows.Forms.ComboBox userTypeValue;
+        private System.Windows.Forms.Label label2;
     }
 }
 

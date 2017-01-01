@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Single click - selects an issue and shows more info in the Issue Info tab.
+
+Issue Info Tab - Used to view more info about the selected issue, its description, comments and gives the ability to add a new comment.
+
+Create Issue Tab - Used to Create/Report a new Issue/Bug.
+
+Update Issue - Used to update the details of the selected issue.</value>
+  </data>
 </root>

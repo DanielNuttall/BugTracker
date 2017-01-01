@@ -151,9 +151,9 @@
             this.userTitle.Location = new System.Drawing.Point(70, 4);
             this.userTitle.Name = "userTitle";
             this.userTitle.Padding = new System.Windows.Forms.Padding(10);
-            this.userTitle.Size = new System.Drawing.Size(181, 45);
+            this.userTitle.Size = new System.Drawing.Size(266, 45);
             this.userTitle.TabIndex = 0;
-            this.userTitle.Text = "Bug Tracker - ";
+            this.userTitle.Text = "Bug Tracker - Projects";
             // 
             // Main
             // 

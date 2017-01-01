@@ -12,21 +12,28 @@ using Octokit;
 
 namespace BugTracker
 {
+
+    // This form will act as a container for all subforms - Providing the overall UI structure.
+
     public partial class Main : Form
     {
+        //  Variables
         private GitHubClient gitClient;
         private User gitUser;
+        private string usertype;
 
-        public Main(User gitUser, GitHubClient gitClient)
+        // assign variables, Open projects form.
+        public Main(User gitUser, GitHubClient gitClient, string usertype)
         {
             InitializeComponent();
 
             this.gitUser = gitUser;
             this.gitClient = gitClient;
+            this.usertype = usertype;
 
-            toolStripStatusLabel.Text = gitUser.Login.ToString();
+            toolStripStatusLabel.Text = gitUser.Login.ToString() + " - " + usertype;
 
-            Projects.Projects a = new Projects.Projects(gitUser, gitClient);
+            Projects.Projects a = new Projects.Projects(gitUser, gitClient, usertype);
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
@@ -35,29 +42,19 @@ namespace BugTracker
          // Open Projects form 
         private void viewProjects_Click(object sender, EventArgs e)
         {
-            closeForms();
-            userTitle.Text = "Bug Tracker - Projects";
-
-            Projects.Projects a = new Projects.Projects(gitUser, gitClient);
-            a.MdiParent = this;
-            a.WindowState = FormWindowState.Maximized;
-            a.Show();
+            refreshProjects();
         }
 
+        // Refresh projects form
         public void refreshProjects()
         {
             closeForms();
             userTitle.Text = "Bug Tracker - Projects";
 
-            Projects.Projects a = new Projects.Projects(gitUser, gitClient);
+            Projects.Projects a = new Projects.Projects(gitUser, gitClient, usertype);
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
-        }
-
-        private void createBugReport_Click(object sender, EventArgs e)
-        {
-
         }
 
         // Close All open forms
