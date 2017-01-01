@@ -99,7 +99,7 @@
             this.viewProjects.Name = "viewProjects";
             this.viewProjects.Size = new System.Drawing.Size(249, 44);
             this.viewProjects.TabIndex = 1;
-            this.viewProjects.Text = "View Projects";
+            this.viewProjects.Text = "View Projects/Repositorys";
             this.viewProjects.UseVisualStyleBackColor = false;
             this.viewProjects.Click += new System.EventHandler(this.viewProjects_Click);
             // 
@@ -151,9 +151,9 @@
             this.userTitle.Location = new System.Drawing.Point(70, 4);
             this.userTitle.Name = "userTitle";
             this.userTitle.Padding = new System.Windows.Forms.Padding(10);
-            this.userTitle.Size = new System.Drawing.Size(266, 45);
+            this.userTitle.Size = new System.Drawing.Size(399, 45);
             this.userTitle.TabIndex = 0;
-            this.userTitle.Text = "Bug Tracker - Projects";
+            this.userTitle.Text = "Bug Tracker - Projects/Repositorys";
             // 
             // Main
             // 

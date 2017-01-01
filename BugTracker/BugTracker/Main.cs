@@ -49,7 +49,7 @@ namespace BugTracker
         public void refreshProjects()
         {
             closeForms();
-            userTitle.Text = "Bug Tracker - Projects";
+            userTitle.Text = "Bug Tracker - Projects/Repositorys";
 
             Projects.Projects a = new Projects.Projects(gitUser, gitClient, usertype);
             a.MdiParent = this;

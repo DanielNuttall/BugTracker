@@ -118,12 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>Single click - selects an issue and shows more info in the Issue Info tab.
+    <value>Single click a issue - selects an issue and shows more info in the Issue/Bug Info tab (Name, Description and comments) aswell as populating data in the update Issue/Bug.
 
-Issue Info Tab - Used to view more info about the selected issue, its description, comments and gives the ability to add a new comment.
+Issue/Bug Info Tab - Used to view more info about the selected issue, its description, comments and gives the ability to add a new comment.
 
-Create Issue Tab - Used to Create/Report a new Issue/Bug.
+Create Issue/Bug Report Tab - Used to Create/Report a new Issue/Bug.
 
-Update Issue - Used to update the details of the selected issue.</value>
+Update Issue/Bug Report - Used to update the details of the selected issue.</value>
   </data>
 </root>

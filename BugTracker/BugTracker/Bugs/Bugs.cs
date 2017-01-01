@@ -285,6 +285,11 @@ namespace BugTracker.Bugs
             newIssueValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles2.Text.Insert(0, " / tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
         }
 
+        private void repoFiles3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            uIssueValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles3.Text.Insert(0, " / tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
+        }
+
         // Create new issue
         private async void button1_Click_1(object sender, EventArgs e)
         {
@@ -347,5 +352,7 @@ namespace BugTracker.Bugs
             this.Dispose();
             Refresh.Show();
         }
+
+        
     }
 }

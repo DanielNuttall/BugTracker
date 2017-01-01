@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bugs));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -78,7 +79,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.uIssueValue = new System.Windows.Forms.RichTextBox();
             this.updateIssue = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -88,6 +90,7 @@
             this.groupBox2.SuspendLayout();
             this.updateIssueTab.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,21 +98,31 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(718, 646);
+            this.panel1.Size = new System.Drawing.Size(718, 749);
             this.panel1.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 19);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(691, 123);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -122,14 +135,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(712, 589);
@@ -143,11 +156,12 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1259, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 646);
+            this.panel2.Size = new System.Drawing.Size(0, 749);
             this.panel2.TabIndex = 3;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.cbox2);
             this.groupBox1.Controls.Add(this.repoFiles);
             this.groupBox1.Controls.Add(this.label2);
@@ -185,20 +199,20 @@
             // 
             // Text
             // 
-            this.Text.Text = "Text";
+            this.Text.Text = "Comment";
             this.Text.Width = 211;
             // 
             // Updated
             // 
-            this.Updated.Text = "Updated";
+            this.Updated.Text = "Time";
             this.Updated.Width = 132;
             // 
             // repoFiles
             // 
             this.repoFiles.FormattingEnabled = true;
-            this.repoFiles.Location = new System.Drawing.Point(9, 470);
+            this.repoFiles.Location = new System.Drawing.Point(41, 468);
             this.repoFiles.Name = "repoFiles";
-            this.repoFiles.Size = new System.Drawing.Size(301, 21);
+            this.repoFiles.Size = new System.Drawing.Size(430, 21);
             this.repoFiles.TabIndex = 14;
             this.repoFiles.SelectedIndexChanged += new System.EventHandler(this.repoFiles_SelectedIndexChanged);
             // 
@@ -223,7 +237,7 @@
             // 
             this.addComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(134)))), ((int)(((byte)(227)))));
             this.addComment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addComment.Location = new System.Drawing.Point(330, 468);
+            this.addComment.Location = new System.Drawing.Point(330, 494);
             this.addComment.Name = "addComment";
             this.addComment.Size = new System.Drawing.Size(141, 23);
             this.addComment.TabIndex = 11;
@@ -277,7 +291,7 @@
             this.issueInfoTab.Padding = new System.Windows.Forms.Padding(3);
             this.issueInfoTab.Size = new System.Drawing.Size(517, 563);
             this.issueInfoTab.TabIndex = 0;
-            this.issueInfoTab.Text = "Issue Info";
+            this.issueInfoTab.Text = "Issue/Bug Info";
             this.issueInfoTab.UseVisualStyleBackColor = true;
             // 
             // createIssueTab
@@ -288,7 +302,7 @@
             this.createIssueTab.Padding = new System.Windows.Forms.Padding(3);
             this.createIssueTab.Size = new System.Drawing.Size(517, 563);
             this.createIssueTab.TabIndex = 1;
-            this.createIssueTab.Text = "Create Issue";
+            this.createIssueTab.Text = "Create Issue/Bug Report";
             this.createIssueTab.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -314,7 +328,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(27, 340);
+            this.label14.Location = new System.Drawing.Point(6, 340);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 13);
             this.label14.TabIndex = 33;
@@ -373,9 +387,9 @@
             // repoFiles2
             // 
             this.repoFiles2.FormattingEnabled = true;
-            this.repoFiles2.Location = new System.Drawing.Point(67, 337);
+            this.repoFiles2.Location = new System.Drawing.Point(41, 337);
             this.repoFiles2.Name = "repoFiles2";
-            this.repoFiles2.Size = new System.Drawing.Size(404, 21);
+            this.repoFiles2.Size = new System.Drawing.Size(430, 21);
             this.repoFiles2.TabIndex = 17;
             this.repoFiles2.SelectedIndexChanged += new System.EventHandler(this.repoFiles2_SelectedIndexChanged);
             // 
@@ -416,7 +430,7 @@
             this.updateIssueTab.Padding = new System.Windows.Forms.Padding(3);
             this.updateIssueTab.Size = new System.Drawing.Size(517, 563);
             this.updateIssueTab.TabIndex = 2;
-            this.updateIssueTab.Text = "Update Issue";
+            this.updateIssueTab.Text = "Update Issue/Bug Report";
             this.updateIssueTab.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -547,6 +561,7 @@
             this.repoFiles3.Name = "repoFiles3";
             this.repoFiles3.Size = new System.Drawing.Size(404, 21);
             this.repoFiles3.TabIndex = 17;
+            this.repoFiles3.SelectedIndexChanged += new System.EventHandler(this.repoFiles3_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -577,28 +592,36 @@
             this.updateIssue.UseVisualStyleBackColor = false;
             this.updateIssue.Click += new System.EventHandler(this.updateIssue_Click_1);
             // 
-            // textBox1
+            // groupBox4
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 598);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(711, 100);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Location = new System.Drawing.Point(12, 598);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(703, 148);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Help/Instructions";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 471);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 13);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "File :";
             // 
             // Bugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1259, 646);
+            this.ClientSize = new System.Drawing.Size(1259, 749);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Bugs";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -610,6 +633,8 @@
             this.updateIssueTab.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,5 +690,7 @@
         private System.Windows.Forms.ColumnHeader Text;
         private System.Windows.Forms.ColumnHeader Updated;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label15;
     }
 }
