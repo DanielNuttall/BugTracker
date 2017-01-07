@@ -93,7 +93,6 @@ namespace BugTracker
             {
                 if (notifyValue.SelectedItem.ToString().Contains(a.Id))
                 {
-
                     noteTypeValue.Text = a.Subject.Type;
                     noteTitleValue.Text = a.Subject.Title;
                     noteRepoValue.Text = a.Repository.Name;

@@ -117,16 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>1. Single click an issue - selects an issue and shows more info in the Issue/Bug Info tab (Name, Description and comments) as well as populating data in the update Issue/Bug.
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Single click an issue: 
+selects an issue and shows more info in the Issue/Bug Info tab (Name, Description and comments) as well as populating data in the update Issue/Bug.
 
-Issue/Bug Info Tab - Used to view more info about the selected issue, its description, comments and gives the ability to add a new comment.
+Issue/Bug Info Tab:
+Used to view more info about the selected issue, its description, comments and gives the ability to add a new comment.
 
-Create Issue/Bug Report Tab - Used to Create/Report a new Issue/Bug. - Use the format below as a guide:
+Create Issue/Bug Report Tab:
+Used to Create/Report a new Issue/Bug. - Use the format below as a guide:
 Symptom: "The Problem"
 Cause: "How to recreate the problem"
 
-Update Issue/Bug Report - Used to update the details of the selected issue.</value>
+Update Issue/Bug Report:
+Used to update the details of the selected issue.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

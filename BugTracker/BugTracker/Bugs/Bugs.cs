@@ -281,12 +281,12 @@ namespace BugTracker.Bugs
         // Add selected file to the Issue
         private void repoFiles2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            newIssueValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles2.Text.Insert(0, " / tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
+            newIssueValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles2.Text.Insert(0, "/tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
         }
 
         private void repoFiles3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            uIssueValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles3.Text.Insert(0, " / tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
+            uIssueValue.AppendText("\nFile: " + selectedRepo.HtmlUrl + repoFiles3.Text.Insert(0, "/tree/master/").Replace("/tree/master/ - ", "/blob/master/"));
         }
 
         // Create new issue
