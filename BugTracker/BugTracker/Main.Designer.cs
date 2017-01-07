@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -38,13 +37,17 @@
             this.viewProjects = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.titlePanel = new System.Windows.Forms.Panel();
-            this.userTitle = new System.Windows.Forms.Label();
+            this.notifyValue = new System.Windows.Forms.ComboBox();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.label2 = new System.Windows.Forms.Label();
+            this.noteTypeValue = new System.Windows.Forms.TextBox();
+            this.noteTitleValue = new System.Windows.Forms.TextBox();
+            this.noteRepoValue = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.menuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.titlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -66,6 +69,14 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.menuPanel.Controls.Add(this.label5);
+            this.menuPanel.Controls.Add(this.label4);
+            this.menuPanel.Controls.Add(this.label3);
+            this.menuPanel.Controls.Add(this.noteRepoValue);
+            this.menuPanel.Controls.Add(this.noteTitleValue);
+            this.menuPanel.Controls.Add(this.noteTypeValue);
+            this.menuPanel.Controls.Add(this.label2);
+            this.menuPanel.Controls.Add(this.notifyValue);
             this.menuPanel.Controls.Add(this.label1);
             this.menuPanel.Controls.Add(this.viewProjects);
             this.menuPanel.Controls.Add(this.shapeContainer1);
@@ -99,7 +110,7 @@
             this.viewProjects.Name = "viewProjects";
             this.viewProjects.Size = new System.Drawing.Size(249, 44);
             this.viewProjects.TabIndex = 1;
-            this.viewProjects.Text = "View Projects/Repositorys";
+            this.viewProjects.Text = "View Projects/Repositories";
             this.viewProjects.UseVisualStyleBackColor = false;
             this.viewProjects.Click += new System.EventHandler(this.viewProjects_Click);
             // 
@@ -109,6 +120,7 @@
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.rectangleShape2,
             this.rectangleShape1});
             this.shapeContainer1.Size = new System.Drawing.Size(250, 653);
             this.shapeContainer1.TabIndex = 7;
@@ -123,37 +135,91 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(249, 56);
             // 
-            // pictureBox1
+            // notifyValue
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 51);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.notifyValue.FormattingEnabled = true;
+            this.notifyValue.Items.AddRange(new object[] {
+            "Select a notification"});
+            this.notifyValue.Location = new System.Drawing.Point(12, 176);
+            this.notifyValue.Name = "notifyValue";
+            this.notifyValue.Size = new System.Drawing.Size(235, 21);
+            this.notifyValue.TabIndex = 9;
+            this.notifyValue.SelectedIndexChanged += new System.EventHandler(this.notifyValue_SelectedIndexChanged);
             // 
-            // titlePanel
+            // rectangleShape2
             // 
-            this.titlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.titlePanel.Controls.Add(this.pictureBox1);
-            this.titlePanel.Controls.Add(this.userTitle);
-            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.titlePanel.Location = new System.Drawing.Point(250, 0);
-            this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(934, 56);
-            this.titlePanel.TabIndex = 23;
+            this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape2.BorderColor = System.Drawing.Color.Transparent;
+            this.rectangleShape2.Location = new System.Drawing.Point(1, 107);
+            this.rectangleShape2.Name = "rectangleShape2";
+            this.rectangleShape2.Size = new System.Drawing.Size(249, 56);
             // 
-            // userTitle
+            // label2
             // 
-            this.userTitle.AutoSize = true;
-            this.userTitle.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userTitle.ForeColor = System.Drawing.Color.White;
-            this.userTitle.Location = new System.Drawing.Point(70, 4);
-            this.userTitle.Name = "userTitle";
-            this.userTitle.Padding = new System.Windows.Forms.Padding(10);
-            this.userTitle.Size = new System.Drawing.Size(399, 45);
-            this.userTitle.TabIndex = 0;
-            this.userTitle.Text = "Bug Tracker - Projects/Repositorys";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.label2.Font = new System.Drawing.Font("Verdana", 15.75F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(51, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Notifications";
+            // 
+            // noteTypeValue
+            // 
+            this.noteTypeValue.Location = new System.Drawing.Point(61, 203);
+            this.noteTypeValue.Name = "noteTypeValue";
+            this.noteTypeValue.Size = new System.Drawing.Size(186, 20);
+            this.noteTypeValue.TabIndex = 11;
+            // 
+            // noteTitleValue
+            // 
+            this.noteTitleValue.Location = new System.Drawing.Point(61, 229);
+            this.noteTitleValue.Name = "noteTitleValue";
+            this.noteTitleValue.Size = new System.Drawing.Size(186, 20);
+            this.noteTitleValue.TabIndex = 12;
+            // 
+            // noteRepoValue
+            // 
+            this.noteRepoValue.Location = new System.Drawing.Point(95, 255);
+            this.noteRepoValue.Name = "noteRepoValue";
+            this.noteRepoValue.Size = new System.Drawing.Size(152, 20);
+            this.noteRepoValue.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Type :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(15, 232);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Title :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Repository :";
             // 
             // Main
             // 
@@ -161,7 +227,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 653);
             this.Controls.Add(this.statusStrip);
-            this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.menuPanel);
             this.IsMdiContainer = true;
             this.Name = "Main";
@@ -171,9 +236,6 @@
             this.statusStrip.PerformLayout();
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.titlePanel.ResumeLayout(false);
-            this.titlePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,12 +247,18 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button viewProjects;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel titlePanel;
-        private System.Windows.Forms.Label userTitle;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox notifyValue;
+        private System.Windows.Forms.Label label2;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox noteRepoValue;
+        private System.Windows.Forms.TextBox noteTitleValue;
+        private System.Windows.Forms.TextBox noteTypeValue;
     }
 }
 

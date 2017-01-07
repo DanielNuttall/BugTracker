@@ -33,6 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Projects));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.projectDesc = new System.Windows.Forms.Label();
@@ -57,12 +58,16 @@
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.titlePanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.titlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -106,14 +111,26 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 56);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(718, 794);
+            this.panel1.Size = new System.Drawing.Size(718, 738);
             this.panel1.TabIndex = 1;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.groupBox3.Location = new System.Drawing.Point(12, 598);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(703, 184);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Help/Instructions";
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.textBox1.Location = new System.Drawing.Point(6, 19);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -127,9 +144,9 @@
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1188, 0);
+            this.panel2.Location = new System.Drawing.Point(1188, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 794);
+            this.panel2.Size = new System.Drawing.Size(0, 738);
             this.panel2.TabIndex = 2;
             // 
             // projectDesc
@@ -223,7 +240,7 @@
             this.groupBox1.Controls.Add(this.projectDesc);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.shapeContainer2);
-            this.groupBox1.Location = new System.Drawing.Point(731, 12);
+            this.groupBox1.Location = new System.Drawing.Point(731, 62);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(359, 234);
             this.groupBox1.TabIndex = 16;
@@ -252,7 +269,7 @@
             this.groupBox2.Controls.Add(this.addUser);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.shapeContainer1);
-            this.groupBox2.Location = new System.Drawing.Point(731, 265);
+            this.groupBox2.Location = new System.Drawing.Point(731, 315);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(359, 234);
             this.groupBox2.TabIndex = 18;
@@ -355,15 +372,37 @@
             this.lineShape6.Y1 = 38;
             this.lineShape6.Y2 = 38;
             // 
-            // groupBox3
+            // titlePanel
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Location = new System.Drawing.Point(12, 598);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(703, 184);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Help/Instructions";
+            this.titlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.titlePanel.Controls.Add(this.pictureBox1);
+            this.titlePanel.Controls.Add(this.userTitle);
+            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Size = new System.Drawing.Size(1188, 56);
+            this.titlePanel.TabIndex = 24;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 51);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // userTitle
+            // 
+            this.userTitle.AutoSize = true;
+            this.userTitle.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userTitle.ForeColor = System.Drawing.Color.White;
+            this.userTitle.Location = new System.Drawing.Point(70, 4);
+            this.userTitle.Name = "userTitle";
+            this.userTitle.Padding = new System.Windows.Forms.Padding(10);
+            this.userTitle.Size = new System.Drawing.Size(406, 45);
+            this.userTitle.TabIndex = 0;
+            this.userTitle.Text = "Bug Tracker - Projects/Repositories";
             // 
             // Projects
             // 
@@ -377,16 +416,20 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.titlePanel);
             this.Name = "Projects";
             this.Text = "Projects";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.titlePanel.ResumeLayout(false);
+            this.titlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,5 +464,8 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Panel titlePanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label userTitle;
     }
 }

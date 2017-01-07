@@ -37,6 +37,7 @@ namespace BugTracker.Bugs
         public Bugs(User gitUser, GitHubClient gitClient, Repository selectedRepo, string userType)
         {
             InitializeComponent();
+
             this.gitUser = gitUser;
             this.gitClient = gitClient;
             this.userType = userType;
@@ -56,8 +57,6 @@ namespace BugTracker.Bugs
                 newIssueMethod.ReadOnly = true;
                 newIssueLine.ReadOnly = true;
                 repoFiles2.Enabled = false;
-
-
             }
 
             connect = new ApiConnection(gitClient.Connection);
@@ -303,6 +302,7 @@ namespace BugTracker.Bugs
                     issue.Assignee = gitUser.Login;
 
                     await issuesClient.Create(repositoryId, issue);
+
                     refresh();
                 }
                 catch (Exception error)
@@ -336,6 +336,9 @@ namespace BugTracker.Bugs
 
                 // long repositoryId, int number, IssueUpdate issueUpdate
                 await issuesClient.Update(repositoryId, issueId, uIssue);
+
+                await comment.Create(repositoryId, issueId, "IssueUpdatedBy : " + gitUser.Login + " on : " + DateTime.Now.ToShortDateString());
+
                 refresh();
             } catch (Exception error)
             {
@@ -352,7 +355,5 @@ namespace BugTracker.Bugs
             this.Dispose();
             Refresh.Show();
         }
-
-        
     }
 }

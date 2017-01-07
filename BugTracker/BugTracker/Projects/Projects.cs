@@ -117,8 +117,8 @@ namespace BugTracker.Projects
         // Open the bugs form for the selected project on double click.
         private async void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 repositoryId = dataGridView1.SelectedCells[0].Value.ToString();
 
                 ApiConnection connect = new ApiConnection(gitClient.Connection);
@@ -130,10 +130,10 @@ namespace BugTracker.Projects
                 Refresh.WindowState = FormWindowState.Maximized;
                 this.Dispose();
                 Refresh.Show();
-            } catch (Exception getProjectFailed)
-            {
-                MessageBox.Show("Could Not Get Project - Check Connection");
-            }
+            //} catch (Exception getProjectFailed)
+            //{
+            //    MessageBox.Show("Could Not Get Project - Check Connection" + getProjectFailed.Message);
+            //}
         }
     }
 }

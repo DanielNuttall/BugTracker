@@ -32,10 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.cbox2 = new System.Windows.Forms.ListView();
             this.User = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Text = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -79,9 +81,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.uIssueValue = new System.Windows.Forms.RichTextBox();
             this.updateIssue = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.titlePanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -90,7 +94,8 @@
             this.groupBox2.SuspendLayout();
             this.updateIssueTab.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.titlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,19 +106,31 @@
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 56);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(718, 749);
+            this.panel1.Size = new System.Drawing.Size(718, 739);
             this.panel1.TabIndex = 2;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(12, 598);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(703, 185);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Help/Instructions";
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.textBox1.Location = new System.Drawing.Point(6, 19);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(691, 123);
+            this.textBox1.Size = new System.Drawing.Size(691, 160);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -154,9 +171,9 @@
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1259, 0);
+            this.panel2.Location = new System.Drawing.Point(1259, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 749);
+            this.panel2.Size = new System.Drawing.Size(0, 739);
             this.panel2.TabIndex = 3;
             // 
             // groupBox1
@@ -176,6 +193,15 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Issue";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 471);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 13);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "File :";
             // 
             // cbox2
             // 
@@ -268,16 +294,16 @@
             this.issueDesc.AutoSize = true;
             this.issueDesc.Location = new System.Drawing.Point(6, 16);
             this.issueDesc.Name = "issueDesc";
-            this.issueDesc.Size = new System.Drawing.Size(188, 13);
+            this.issueDesc.Size = new System.Drawing.Size(194, 13);
             this.issueDesc.TabIndex = 8;
-            this.issueDesc.Text = "Description - Select a Issue to see info";
+            this.issueDesc.Text = "Description - Select an Issue to see info";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.issueInfoTab);
             this.tabControl1.Controls.Add(this.createIssueTab);
             this.tabControl1.Controls.Add(this.updateIssueTab);
-            this.tabControl1.Location = new System.Drawing.Point(722, 3);
+            this.tabControl1.Location = new System.Drawing.Point(722, 62);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(525, 589);
@@ -339,9 +365,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 281);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 13);
+            this.label11.Size = new System.Drawing.Size(310, 13);
             this.label11.TabIndex = 32;
-            this.label11.Text = "Line Number :";
+            this.label11.Text = "Line Number : (The line number/range containing the issue/bug)";
             // 
             // newIssueLine
             // 
@@ -356,9 +382,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 193);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 13);
+            this.label12.Size = new System.Drawing.Size(235, 13);
             this.label12.TabIndex = 30;
-            this.label12.Text = "Method :";
+            this.label12.Text = "Method : (The method containing the issue/bug)";
             // 
             // newIssueMethod
             // 
@@ -398,9 +424,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(5, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(188, 13);
             this.label3.TabIndex = 16;
-            this.label3.Text = "New Issue Text";
+            this.label3.Text = "Issue Description : (Symptom + Cause)";
             // 
             // newIssueValue
             // 
@@ -408,7 +434,7 @@
             this.newIssueValue.Name = "newIssueValue";
             this.newIssueValue.Size = new System.Drawing.Size(465, 104);
             this.newIssueValue.TabIndex = 15;
-            this.newIssueValue.Text = "";
+            this.newIssueValue.Text = "Symptom: \"The Problem\"\nCause: \"How to recreate the problem\"";
             // 
             // button1
             // 
@@ -462,9 +488,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(6, 440);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 13);
+            this.label13.Size = new System.Drawing.Size(60, 13);
             this.label13.TabIndex = 28;
-            this.label13.Text = "Asign To :";
+            this.label13.Text = "Assign To :";
             // 
             // uAssign
             // 
@@ -479,9 +505,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(6, 330);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 13);
+            this.label10.Size = new System.Drawing.Size(310, 13);
             this.label10.TabIndex = 26;
-            this.label10.Text = "Line Number :";
+            this.label10.Text = "Line Number : (The line number/range containing the issue/bug)";
             // 
             // uIssueLine
             // 
@@ -496,9 +522,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 242);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.Size = new System.Drawing.Size(235, 13);
             this.label9.TabIndex = 24;
-            this.label9.Text = "Method :";
+            this.label9.Text = "Method : (The method containing the issue/bug)";
             // 
             // uIssueMethod
             // 
@@ -592,36 +618,52 @@
             this.updateIssue.UseVisualStyleBackColor = false;
             this.updateIssue.Click += new System.EventHandler(this.updateIssue_Click_1);
             // 
-            // groupBox4
+            // titlePanel
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Location = new System.Drawing.Point(12, 598);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(703, 148);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Help/Instructions";
+            this.titlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.titlePanel.Controls.Add(this.pictureBox1);
+            this.titlePanel.Controls.Add(this.userTitle);
+            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Size = new System.Drawing.Size(1259, 56);
+            this.titlePanel.TabIndex = 24;
             // 
-            // label15
+            // pictureBox1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 471);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 13);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "File :";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 51);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // userTitle
+            // 
+            this.userTitle.AutoSize = true;
+            this.userTitle.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userTitle.ForeColor = System.Drawing.Color.White;
+            this.userTitle.Location = new System.Drawing.Point(70, 4);
+            this.userTitle.Name = "userTitle";
+            this.userTitle.Padding = new System.Windows.Forms.Padding(10);
+            this.userTitle.Size = new System.Drawing.Size(248, 45);
+            this.userTitle.TabIndex = 0;
+            this.userTitle.Text = "Bug Tracker - Issues";
             // 
             // Bugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1259, 749);
+            this.ClientSize = new System.Drawing.Size(1259, 795);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.titlePanel);
             this.Name = "Bugs";
             this.panel1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -633,8 +675,9 @@
             this.updateIssueTab.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.titlePanel.ResumeLayout(false);
+            this.titlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -692,5 +735,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel titlePanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label userTitle;
     }
 }

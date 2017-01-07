@@ -39,7 +39,6 @@ namespace BugTracker
                 basicAuth = new Credentials(User_Text.Text, Pass_Text.Text);
                 gitClient.Credentials = basicAuth;
                 gitUser = await gitClient.User.Current();
-
                 Main main = new Main(gitUser, gitClient, userTypeValue.Text);
                 main.Show();
             }

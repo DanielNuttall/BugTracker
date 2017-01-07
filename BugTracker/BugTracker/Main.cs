@@ -21,6 +21,9 @@ namespace BugTracker
         private GitHubClient gitClient;
         private User gitUser;
         private string usertype;
+        public string title;
+
+        public IReadOnlyList<Notification> noteList;
 
         // assign variables, Open projects form.
         public Main(User gitUser, GitHubClient gitClient, string usertype)
@@ -37,6 +40,8 @@ namespace BugTracker
             a.MdiParent = this;
             a.WindowState = FormWindowState.Maximized;
             a.Show();
+
+            getNotificatins();
         }
 
          // Open Projects form 
@@ -49,7 +54,6 @@ namespace BugTracker
         public void refreshProjects()
         {
             closeForms();
-            userTitle.Text = "Bug Tracker - Projects/Repositorys";
 
             Projects.Projects a = new Projects.Projects(gitUser, gitClient, usertype);
             a.MdiParent = this;
@@ -63,6 +67,37 @@ namespace BugTracker
             foreach (Form frm in this.MdiChildren)
             {
                 frm.Close();
+            }
+        }
+
+        public async void getNotificatins()
+        {
+            ApiConnection connect = new ApiConnection(gitClient.Connection);
+            NotificationsClient notifyClient = new NotificationsClient(connect);
+            noteList = await notifyClient.GetAllForCurrent();
+
+            notifyValue.Text = "Select a notification";
+
+            foreach (Notification a in noteList)
+            {
+                if (a.Unread == true)
+                {
+                    notifyValue.Items.Add(" Id :" + a.Id + " Type :" + a.Subject.Type);
+                }
+            }
+        }
+
+        private void notifyValue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Notification a in noteList)
+            {
+                if (notifyValue.SelectedItem.ToString().Contains(a.Id))
+                {
+
+                    noteTypeValue.Text = a.Subject.Type;
+                    noteTitleValue.Text = a.Subject.Title;
+                    noteRepoValue.Text = a.Repository.Name;
+                }
             }
         }
     }
