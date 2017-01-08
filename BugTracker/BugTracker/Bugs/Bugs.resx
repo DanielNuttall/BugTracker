@@ -119,14 +119,14 @@
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>Single click an issue: 
-selects an issue and shows more info in the Issue/Bug Info tab (Name, Description and comments) as well as populating data in the update Issue/Bug.
+Selects an issue and shows more info in the Issue/Bug Info tab (Name, Description and comments) as well as populating data in the update Issue/Bug.
 
 Issue/Bug Info Tab:
 Used to view more info about the selected issue, its description, comments and gives the ability to add a new comment.
 
 Create Issue/Bug Report Tab:
 Used to Create/Report a new Issue/Bug. - Use the format below as a guide:
-Symptom: "The Problem"
+Symptom: "The problem"
 Cause: "How to recreate the problem"
 
 Update Issue/Bug Report:

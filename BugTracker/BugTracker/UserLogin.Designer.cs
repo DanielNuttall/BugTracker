@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserLogin));
             this.Pass_Text = new System.Windows.Forms.TextBox();
             this.User_Text = new System.Windows.Forms.TextBox();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_Login = new System.Windows.Forms.Button();
             this.loginLabel = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape4 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.rectangleShape5 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.userTypeValue = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Pass_Text
@@ -51,7 +54,7 @@
             this.Pass_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Pass_Text.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pass_Text.ForeColor = System.Drawing.Color.DarkGray;
-            this.Pass_Text.Location = new System.Drawing.Point(162, 162);
+            this.Pass_Text.Location = new System.Drawing.Point(162, 170);
             this.Pass_Text.Name = "Pass_Text";
             this.Pass_Text.Size = new System.Drawing.Size(168, 20);
             this.Pass_Text.TabIndex = 1;
@@ -65,7 +68,7 @@
             this.User_Text.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.User_Text.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.User_Text.ForeColor = System.Drawing.Color.DarkGray;
-            this.User_Text.Location = new System.Drawing.Point(162, 113);
+            this.User_Text.Location = new System.Drawing.Point(162, 121);
             this.User_Text.Name = "User_Text";
             this.User_Text.Size = new System.Drawing.Size(168, 20);
             this.User_Text.TabIndex = 0;
@@ -80,7 +83,7 @@
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.ForeColor = System.Drawing.Color.White;
-            this.btn_exit.Location = new System.Drawing.Point(88, 251);
+            this.btn_exit.Location = new System.Drawing.Point(88, 259);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(117, 32);
             this.btn_exit.TabIndex = 2;
@@ -95,7 +98,7 @@
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.ForeColor = System.Drawing.Color.White;
-            this.btn_Login.Location = new System.Drawing.Point(262, 251);
+            this.btn_Login.Location = new System.Drawing.Point(262, 259);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(117, 32);
             this.btn_Login.TabIndex = 3;
@@ -108,12 +111,12 @@
             this.loginLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginLabel.AutoSize = true;
-            this.loginLabel.Font = new System.Drawing.Font("Verdana", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(150, 9);
+            this.loginLabel.Font = new System.Drawing.Font("Verdana", 15.75F);
+            this.loginLabel.Location = new System.Drawing.Point(137, 74);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(207, 78);
+            this.loginLabel.Size = new System.Drawing.Size(218, 25);
             this.loginLabel.TabIndex = 6;
-            this.loginLabel.Text = "Login";
+            this.loginLabel.Text = "Bug Tracker - Login";
             // 
             // shapeContainer1
             // 
@@ -130,6 +133,18 @@
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
             // 
+            // rectangleShape5
+            // 
+            this.rectangleShape5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rectangleShape5.BackColor = System.Drawing.Color.Gainsboro;
+            this.rectangleShape5.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape5.BorderColor = System.Drawing.Color.White;
+            this.rectangleShape5.CornerRadius = 5;
+            this.rectangleShape5.Location = new System.Drawing.Point(85, 208);
+            this.rectangleShape5.Name = "rectangleShape5";
+            this.rectangleShape5.Size = new System.Drawing.Size(298, 41);
+            // 
             // rectangleShape4
             // 
             this.rectangleShape4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -138,7 +153,7 @@
             this.rectangleShape4.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape4.BorderColor = System.Drawing.Color.White;
             this.rectangleShape4.CornerRadius = 5;
-            this.rectangleShape4.Location = new System.Drawing.Point(259, 247);
+            this.rectangleShape4.Location = new System.Drawing.Point(259, 255);
             this.rectangleShape4.Name = "rectangleShape4";
             this.rectangleShape4.Size = new System.Drawing.Size(124, 38);
             // 
@@ -150,7 +165,7 @@
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderColor = System.Drawing.Color.White;
             this.rectangleShape1.CornerRadius = 5;
-            this.rectangleShape1.Location = new System.Drawing.Point(85, 247);
+            this.rectangleShape1.Location = new System.Drawing.Point(85, 255);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(124, 38);
             // 
@@ -162,7 +177,7 @@
             this.rectangleShape3.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape3.BorderColor = System.Drawing.Color.White;
             this.rectangleShape3.CornerRadius = 5;
-            this.rectangleShape3.Location = new System.Drawing.Point(151, 102);
+            this.rectangleShape3.Location = new System.Drawing.Point(151, 110);
             this.rectangleShape3.Name = "rectangleShape3";
             this.rectangleShape3.Size = new System.Drawing.Size(186, 41);
             // 
@@ -174,7 +189,7 @@
             this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape2.BorderColor = System.Drawing.Color.White;
             this.rectangleShape2.CornerRadius = 5;
-            this.rectangleShape2.Location = new System.Drawing.Point(153, 151);
+            this.rectangleShape2.Location = new System.Drawing.Point(153, 159);
             this.rectangleShape2.Name = "rectangleShape2";
             this.rectangleShape2.Size = new System.Drawing.Size(186, 41);
             // 
@@ -197,25 +212,13 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "BugTracker uses Github - Signup for an account here :";
             // 
-            // rectangleShape5
-            // 
-            this.rectangleShape5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rectangleShape5.BackColor = System.Drawing.Color.Gainsboro;
-            this.rectangleShape5.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape5.BorderColor = System.Drawing.Color.White;
-            this.rectangleShape5.CornerRadius = 5;
-            this.rectangleShape5.Location = new System.Drawing.Point(85, 200);
-            this.rectangleShape5.Name = "rectangleShape5";
-            this.rectangleShape5.Size = new System.Drawing.Size(298, 41);
-            // 
             // userTypeValue
             // 
             this.userTypeValue.FormattingEnabled = true;
             this.userTypeValue.Items.AddRange(new object[] {
             "Admin",
             "Tester"});
-            this.userTypeValue.Location = new System.Drawing.Point(246, 211);
+            this.userTypeValue.Location = new System.Drawing.Point(246, 219);
             this.userTypeValue.Name = "userTypeValue";
             this.userTypeValue.Size = new System.Drawing.Size(133, 21);
             this.userTypeValue.TabIndex = 10;
@@ -226,11 +229,20 @@
             this.label2.BackColor = System.Drawing.Color.Gainsboro;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(108, 211);
+            this.label2.Location = new System.Drawing.Point(108, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 18);
             this.label2.TabIndex = 11;
             this.label2.Text = "Interface Type:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(215, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 51);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // UserLogin
             // 
@@ -238,6 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(489, 413);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.userTypeValue);
             this.Controls.Add(this.label1);
@@ -253,6 +266,7 @@
             this.Name = "UserLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +289,7 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape5;
         private System.Windows.Forms.ComboBox userTypeValue;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
